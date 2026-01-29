@@ -12,7 +12,7 @@ Google AI mode is a really great chat bot. It is giving great answers on both te
 
 I think the nature of your interactions with Google in AI mode is giving away quite a lot of information about you and your work. All this information is stored by the google empire and analyzed later on.
 
-The result this: the Google platform will be able to get a better idea on who you are and what you do. Some people view this as an invasion of privacy.
+The result: Google will be able to get a better idea on who you are and what you do. Some people view this as an invasion of privacy.
 
 The good thing: Google in AI mode can currently be used without being logged into a google account. For example you can use it from a 'Private window' in firefox. This gives google less information on how to connect the dots. This project gives some advise how to do that.
 
