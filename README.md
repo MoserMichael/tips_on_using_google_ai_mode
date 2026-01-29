@@ -26,6 +26,7 @@ Also: you can store your chat session as HTML files, here with this project you 
     - Open the file menu 
     - choose 'New Private Windows' from the menu.
     - now use the following URL to to access the AI mode `https://www.google.com/search?udm=50`
+    - Remember that the chat session is gone, once you have closed the browser window. You can save the chat session as an html file, with the 'Save As' option in the 'File' menu.
 
 ### Converting saved html sessions to markdown
 
