@@ -24,12 +24,15 @@ Also: you can store your chat session as HTML files, here with this project you 
 
 - To use google AI mode with Firefox:
     - Open the file menu 
-    - choose 'New Incognito Windows' from the menu.
+    - choose 'New Private Windows' from the menu.
     - now use the following URL to to access the AI mode `https://www.google.com/search?udm=50`
 
 ### Converting saved html sessions to markdown
 
 You get a command line tool for converting the html file to markdown format. Now there are two ways to run that, as shell script that runs a docker container, or by running the script.
+
+The script also removes links to google services and is removing images, so you get your text only, and links to the cited sources.
+Images are removed in order to get rid of inline images.
 
 ### Running as a docker container
 
