@@ -5,14 +5,14 @@ Google AI mode is a really great chat bot. It is giving great answers on both te
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat session in all locations, even in places where AI mode does not appear on the google search page.
 - Google in AI mode uses the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
     - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, on the bases of the current chat session. 
-    - In comparison with gemini: Google in AI mode is also more likely to cite tje sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner.
+    - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner.
     - The UI of AI mode does not keep a history of your chats, unlike what you get with gemini. So you can't easily return to a previous chat and continue it.
 
 ### Now where is the problem? 
 
 I think the nature of your interactions with Google in AI mode is giving away quite a lot of information about you and your work. All this information is stored by the google empire and analyzed later on.
 
-The result of this is that the platform will be able to get a better idea on who you are and what you do. Some people view this as an invasion of privacy.
+The result this: the Google platform will be able to get a better idea on who you are and what you do. Some people view this as an invasion of privacy.
 
 The good thing: Google in AI mode can currently be used without being logged into a google account. For example you can use it from a 'Private window' in firefox. This gives google less information on how to connect the dots. This project gives some advise how to do that.
 
