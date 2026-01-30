@@ -30,10 +30,14 @@ Also: you can store your chat session as HTML files, here with this project you 
 
 ### Converting saved html sessions to markdown
 
-You get a command line tool for converting the html file to markdown format. Now there are two ways to run that, as shell script that runs a docker container, or by running the script.
+You get a command line tool for converting the html file to markdown format. I think it is important to keep notes in a textual format, as that is the only way to search through the notes. HML has a very complicated structure, where most of the volume is about the formatting of the text. Tou can't quite 'touch' the text that it includes.
 
-The script also removes links to google services and is removing images, so you get your text only, and links to the cited sources.
-Images are removed in order to get rid of inline images.
+Now Here you have two ways to run the html to markdown transformation script - as shell script that runs a docker container, or by running the python script.
+
+What does the html to markdown converter do? 
+
+The script inserts a marker, to distinguish the question from the answer. Is also removes links to google services and it is removing images, so you get your text only, and links to the cited sources.
+images.
 
 ### Running as a docker container
 
