@@ -8,6 +8,8 @@ Google AI mode is a really great chat bot. It is giving great answers on both te
     - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner.
     - The UI of AI mode does not keep a history of your chats, unlike what you get with gemini. So you can't easily return to a previous chat and continue it.
 
+Google in AI mode has a shorter context window, compared to google gemini. This means that AI mode is not the right tool to conduct a long chat session that tries to research a complex topic very deeply. If you try to conduct a long chat session with many questions and answer, then you wil notice that google in AI mode does not remember what it talked about earlier. However it is great for fact based questions and answers - exactly what you would expect from an intelligent search engine.  
+
 ### Now where is the problem? 
 
 I think the nature of your interactions with Google in AI mode is giving away quite a lot of information about you and your work. All this information is stored by the google empire and analyzed later on.
