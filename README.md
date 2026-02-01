@@ -78,5 +78,39 @@ Usage:
 - convert all files in a given directory `python conv.py -d  ~/directory-with-stored-sessions` 
 
 
+-----
 
-U
+### Now a digression
+
+I somehow got convinced, that privacy isn't a luxury - it's a basic necessity.
+
+Look at the song ['The Rolling Stone'](https://www.youtube.com/watch?v=IwOfCgkyEj0) by Bob Dylan
+
+I am probably misinterpreting the whole thing; Still: I think it is recalling the story of a downfall: 
+
+At first there is the attempt to negotiate: 
+
+```
+He's not selling any alibis
+As you stare into the vacuum of his eyes
+And say do you want to make a deal?
+```
+
+Then comes the realization of an inevitable outcome
+
+```
+Ain't it hard when you discovered that
+He really wasn't where it's at
+After he took from you everything he could steal
+```
+
+Next you are down and out, and with that the realization that 'you've got no secrets to conceal'
+
+```
+When you ain't got nothing, you got nothing to lose
+You're invisible now, you've got no secrets to conceal
+
+How does it feel, ah how does it feel?
+To be on your own, with no direction home
+Like a complete unknown, like a rolling stone
+```
