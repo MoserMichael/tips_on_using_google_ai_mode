@@ -1,11 +1,14 @@
 # Google AI mode for privacy aware individuals
 
+Disclaimer: all these observations were made in early 2026. Now all of this is subject to change, in our fast-moving world.
+
 Google AI mode is a really great chat bot. It is giving great answers on both technical questions and questions of a general nature. I am frankly impressed by this milestone of engineering, working at such a huge scale.
 
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Google in AI mode uses the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
     - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
-    - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner.
+    - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner. 
+    - I like that AI mode has a more direct / less sycophantic style of communication, compared to Gemini. 
     - The UI of AI mode does not keep a history of your chats, unlike what you get with gemini. So you can't easily return to a previous chat and continue it.
 
 Google in AI mode has a shorter context window, compared to google gemini. This means that AI mode is not the right tool to conduct a long chat session that tries to research a complex topic very deeply. If you try to conduct a long chat session with many questions and answer, then you wil notice that google in AI mode does not remember what it talked about earlier. However it is great for fact based questions and answers - exactly what you would expect from an intelligent search engine.  
