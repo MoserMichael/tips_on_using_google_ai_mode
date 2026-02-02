@@ -84,7 +84,7 @@ Usage:
 
 I somehow got convinced, that privacy isn't a luxury - it's a basic necessity.
 
-Look at the song ['The Rolling Stone'](https://www.youtube.com/watch?v=IwOfCgkyEj0) by Bob Dylan
+Look at the song ['Like a Rolling Stone'](https://www.youtube.com/watch?v=IwOfCgkyEj0) by Bob Dylan
 
 I am probably misinterpreting the whole thing; Still: I think it is recalling the story of a downfall: 
 
@@ -114,3 +114,5 @@ How does it feel, ah how does it feel?
 To be on your own, with no direction home
 Like a complete unknown, like a rolling stone
 ```
+
+Here is the [full text](https://www.bobdylan.com/songs/rolling-stone/)
