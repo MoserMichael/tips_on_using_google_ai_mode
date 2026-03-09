@@ -28,6 +28,8 @@ Also: you can store your chat session as HTML files, here with this project you 
 
 - General advise: use Firefox. Google Chrome has the 'incognito mode' feature, however it turns out that this is [not very incognito](https://www.nytimes.com/wirecutter/blog/incognito-mode-isnt-incognito/)
 
+ (Why do they allow access to gemini in incognito mode? Now maybe they are counting on fingerprinting, so as to identify the customer by means of fingerprinting. Maybe it is time for me to learn more about fingerprinting techniques...)
+
 - To use google AI mode with Firefox:
     - Open the file menu 
     - choose 'New Private Windows' from the menu.
