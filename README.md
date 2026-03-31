@@ -1,5 +1,7 @@
 # Google AI mode for privacy aware individuals
 
+Related link: you can check out my gist on running [Claude locally on the Mac](https://gist.github.com/MoserMichael/8e6dd03acf910b7c4e8f1f51734a94d1)
+
 Disclaimer: all these observations were made in early 2026. Now all of this is subject to change, in our fast-moving world.
 
 Google AI mode is a really great chat bot. It is giving great answers on both technical questions and questions of a general nature. I am frankly impressed by this milestone of engineering, working at such a huge scale.
