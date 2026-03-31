@@ -49,7 +49,7 @@ Will ask a question via chromium browser and presents you with a json formatted 
 
 Warning: This program works a couple of time, then google decides that the same ip address is generating unusual traffic and starts a re-captcha. Selenium has limited ability to solve them.
 
-All such web scraping efforts break at some point, it's a cat and mouse game...
+All such web scraping efforts break at some point, it's a cat and mouse game. You probably need ip address randomization for such a trick.
 
 ### Now a digression
 
