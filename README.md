@@ -45,7 +45,7 @@ Also: you can store your chat session as HTML files, here with this project you 
 ```
 
 Will ask a question via chromium browser and presents you with a json formatted output. This script does not depend on any scraping services, if it works.
-(all you need for this is selenium base and beautiful soup4 python packages)
+(all you need for this is chromium browser, selenium base and beautiful soup4 python packages)
 
 ### Now a digression
 
