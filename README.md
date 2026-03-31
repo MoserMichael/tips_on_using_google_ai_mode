@@ -47,6 +47,10 @@ Also: you can store your chat session as HTML files, here with this project you 
 Will ask a question via chromium browser and presents you with a json formatted output. This script does not depend on any scraping services, if it works.
 (all you need for this is chromium browser, selenium base and beautiful soup4 python packages)
 
+Warning: This program works a couple of time, then google decides that the same ip address is generating unusual traffic and starts a re-captcha. Selenium has limited ability to solve them.
+
+All such web scraping efforts break at some point, it's a cat and mouse game...
+
 ### Now a digression
 
 I somehow got convinced, that privacy isn't a luxury - it's a basic necessity.
