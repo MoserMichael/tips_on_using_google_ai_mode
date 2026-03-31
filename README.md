@@ -36,52 +36,16 @@ Also: you can store your chat session as HTML files, here with this project you 
     - now use the following URL to to access the AI mode `https://www.google.com/search?udm=50`
     - Remember that the chat session is gone, once you have closed the browser window. You can save the chat session as an html file, with the 'Save As' option in the 'File' menu.
 
-### Converting saved html sessions to markdown
 
-You get a command line tool for converting the html file to markdown format. I think it is important to keep notes in a textual format, as that is the only way to search through the notes. HML has a very complicated structure, where most of the volume is about the formatting of the text. Tou can't quite 'touch' the text that it includes.
+### Command line tool for asking single questions
 
-Now Here you have two ways to run the html to markdown transformation script - as shell script that runs a docker container, or by running the python script.
 
-What does the html to markdown converter do? 
-
-The script inserts a marker, to distinguish the question from the answer. Is also removes links to google services and it is removing images, so you get your text only, and links to the cited sources.
-images.
-
-### Running as a docker container
-
-You need to have docker desktop installed and running on your laptop
-
-Installation: 
-
-- download the shell script from this link [link to script](https://raw.githubusercontent.com/MoserMichael/tips_on_using_google_ai_mode/refs/heads/main/run_llm.sh)
-- make the downloaded script executable `chmod +x run_llm.sh`
-
-Usage:
-
-- convert a single file `./run_llm.sh -f ~/Downloads/saved-chat-session.htm` this adds the file `~/Downloads/saved-chat-session.htm`
-- convert all files in a given directory `./run_llm.sh -d  ~/directory-with-stored-sessions` 
-
-### Running the python script
-
-Installation:
-
-- Download the python script file conv.py [link to python script](https://raw.githubusercontent.com/MoserMichael/tips_on_using_google_ai_mode/refs/heads/main/conv.py)
-- create a virtual environment and install the required libaries
 ```
-    python3 -m venv .venv
-    source .venv/bin/activate
-    pip3 install html-to-markdown
-    pip3 install mistune
+./ask_google_aimode.py -q 'meaning on life, the universe and everything'
 ```
 
-Usage:
-
-- activate the virtual environment `source .venv/bin/activate`
-- convert a single file `python conv.py -f ~/Downloads/saved-chat-session.htm` this adds the file `~/Downloads/saved-chat-session.htm`
-- convert all files in a given directory `python conv.py -d  ~/directory-with-stored-sessions` 
-
-
------
+Will ask a question via chromium browser and presents you with a json formatted output. This script does not depend on any scraping services, if it works.
+(all you need for this is selenium base and beautiful soup4 python packages)
 
 ### Now a digression
 
