@@ -49,9 +49,11 @@ Also: you can store your chat session as HTML files, here with this project you 
 Will ask a question via chromium browser and presents you with a json formatted output. This script does not depend on any scraping services, if it works.
 (all you need for this is chromium browser, selenium base and beautiful soup4 python packages)
 
-Warning: This program works a couple of time, then google decides that the same ip address is generating unusual traffic and starts a re-captcha. Selenium has limited ability to solve them.
+Warning: This program works a couple of time, then google decides that the same ip address is generating unusual traffic and starts a re-captcha. BeautifulSoup4 with Selenium have limited ability to solve re-captcha challenges.
 
-All such web scraping efforts break at some point, it's a cat and mouse game. You probably need ip address randomization for such a trick.
+All such web scraping efforts break at some point, it's a cat and mouse game. You will need ip address randomization for such a trick, otherwise re-captchas will stop it.
+
+Also the trick to avoid browser scraping: the prompt of the script asks for an xml formatted response, and searches for the text in the xml response.
 
 ### Now a digression
 
