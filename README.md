@@ -8,6 +8,8 @@ Google AI mode is a really great chat bot. It is giving great answers on both te
 
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Additional query parameters `hl=en` if you want to force the UI language and language of the LLM answer to English. `https://www.google.com/search?udm=50&hl=en` [link](https://www.google.com/search?udm=50&hl=en)
+- while being logged into a google account: `https://myactivity.google.com/myactivity?product=83` - gives you the history of your past discussions with Google AI mode. (Right now there is no such history on the chat bot page, for whatever reasons)
+
  Google in AI mode uses the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
     - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
     - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner. 
@@ -15,6 +17,15 @@ Google AI mode is a really great chat bot. It is giving great answers on both te
     - The UI of AI mode does not keep a history of your chats, unlike what you get with gemini. So you can't easily return to a previous chat and continue it.
 
 Google in AI mode has a shorter context window, compared to google gemini. This means that AI mode is not the right tool to conduct a long chat session that tries to research a complex topic very deeply. If you try to conduct a long chat session with many questions and answer, then you wil notice that google in AI mode does not remember what it talked about earlier. However it is great for fact based questions and answers - exactly what you would expect from an intelligent search engine.  
+
+### Alternative options:
+
+The brave search engine also has a similar chat bot in query fan-out mode. 
+
+See link [https://search.brave.com/ask?q=&source=llmSuggest](https://search.brave.com/ask?q=&source=llmSuggest)
+
+Also I have started to use regular brave search [https://search.brave.com/](https://search.brave.com/) - its sometimes a close competition for google, if you ask me! 
+
 
 ### Now where is the problem? 
 
