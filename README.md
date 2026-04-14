@@ -109,4 +109,6 @@ To be on your own, with no direction home
 Like a complete unknown, like a rolling stone
 ```
 
+In this interpretation _privacy_ means something bigger, it's a prerequisite for _agency_ - the ability to act on your own.
+
 Here is the [full text](https://www.bobdylan.com/songs/rolling-stone/)
