@@ -11,10 +11,9 @@ Now some google accounts or some locations _don't_ display the option of google 
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Additional query parameters `hl=en` if you want to force the UI language and language of the LLM answer to English. `https://www.google.com/search?udm=50&hl=en` [link](https://www.google.com/search?udm=50&hl=en)
 - Google ai pro mode. The UI has a pro mode switch, this adds the `arv=1` parameters. Now the full URL for google AI mode, in english and pro mode is `https://www.google.com/search?udm=50&hl=en&arv=1` [link](https://www.google.com/search?udm=50&hl=en&arv=1) 'pro' mode seems to thing longer about an answer, so it is better for deep research.
-- Other dorky url parameters: Switching between 'fast' and 'pro' mode wil add additional parameters to the url. Note that both versions have common url parameters `aep=1` `ntc=1` `fbs=` - without value. I like to keep my url's short, with minimal URL parameters, most of this additional stuff probably only serves fingerprinting and tracking purposes... 
+- Other dorky url parameters: Switching between 'fast' and 'pro' mode wil add additional parameters to the url. Note that both versions have common url parameters `aep=1` `ntc=1` `fbs=` - without value. I like to keep my url's short, with minimal URL parameters (the reason: If you have something essential like login session id, then you would probably send this information via http post parameters, and not via url parameter...) 
     - fast mode full url: `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50`
     - pro mode full url:  `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50&arv=1`
-
 
 - while being logged into a google account: `https://myactivity.google.com/myactivity?product=83` - gives you the history of your past discussions with Google AI mode. (Right now there is no such history on the chat bot page, for whatever reasons)
 
