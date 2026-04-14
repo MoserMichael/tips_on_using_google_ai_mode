@@ -6,7 +6,7 @@ Disclaimer: all these observations were made in early 2026. Now all of this is s
 
 Google AI mode is a really great chat bot. It is giving great answers on both technical questions and questions of a general nature. I am frankly impressed by this milestone of engineering, working at such a huge scale.
 
-Now some google accounts or some locations _don't_ display the option of google ai mode, this guide explains, which google URL parameters will force this feature to appear.
+Now some google accounts or some locations _don't_ display the option of google ai mode, this guide explains, which google URL parameters will force this feature to appear, and how to customize it via the url parameters.
 
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Additional query parameters `hl=en` if you want to force the UI language and language of the LLM answer to English. `https://www.google.com/search?udm=50&hl=en` [link](https://www.google.com/search?udm=50&hl=en)
@@ -23,7 +23,9 @@ Now some google accounts or some locations _don't_ display the option of google 
     - I like that AI mode has a more direct / less sycophantic style of communication, compared to Gemini. 
     - The UI of AI mode does not keep a history of your chats, unlike what you get with gemini. So you can't easily return to a previous chat and continue it.
 
-Google in AI mode has a shorter context window, compared to google gemini. This means that AI mode is not the right tool to conduct a long chat session that tries to research a complex topic very deeply. If you try to conduct a long chat session with many questions and answer, then you wil notice that google in AI mode does not remember what it talked about earlier. However it is great for fact based questions and answers - exactly what you would expect from an intelligent search engine.  
+Google in AI mode has a shorter context window, compared to google gemini. This means that AI mode is not the right tool to conduct a long chat session that tries to research a complex topic very deeply. If you try to conduct a long chat session with many questions and answer, then you will notice that google in AI mode does not remember what it talked about earlier. However it is great for fact based questions and answers - exactly what you would expect from an intelligent search engine.  
+
+Another disadvantage: you can't set your own system prompt with google ai mode. It might be, that query fan-out is requiring a specialized system prompt, but this is just guessing.
 
 ### Alternative options:
 
