@@ -10,7 +10,7 @@ Now some google accounts or some locations _don't_ display the option of google 
 
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Additional query parameters `hl=en` if you want to force the UI language and language of the LLM answer to English. `https://www.google.com/search?udm=50&hl=en` [link](https://www.google.com/search?udm=50&hl=en)
-- Google ai pro mode. The UI has a pro mode switch, this adds the `arv=1` parameters. Now the full URL for google AI mode, in english and pro mode is `https://www.google.com/search?udm=50&hl=en&arv=1` [link](https://www.google.com/search?udm=50&hl=en&arv=1) 'pro' mode seems to thing longer about an answer, so it is better for deep research.
+- Google ai pro mode. The UI has a pro mode switch, this adds the `arv=1` parameters. Now the full URL for google AI mode, in english and pro mode is `https://www.google.com/search?udm=50&hl=en&arv=1` [link](https://www.google.com/search?udm=50&hl=en&arv=1) 'pro' mode seems to think longer, so it is better for deep research.
 - Other dorky url parameters: Switching between 'fast' and 'pro' mode wil add additional parameters to the url. Note that both versions have common url parameters `aep=1` `ntc=1` `fbs=` - without value. I like to keep my url's short, with minimal URL parameters (the reason: If you have something essential like login session id, then you would probably send this information via http post parameters, and not via url parameter...) 
     - fast mode full url: `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50`
     - pro mode full url:  `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50&arv=1`
@@ -96,7 +96,9 @@ He really wasn't where it's at
 After he took from you everything he could steal
 ```
 
-Next you are down and out, and with that the realization that 'you've got no secrets to conceal'
+Next you are down and out, and with that the realization that 'you've got no secrets to conceal'.
+
+How as I understand it: You are essentially transparent, once the experienced counterpart knows everything about you - and with full knowledge comes full power and full leverage over your small world.
 
 ```
 When you ain't got nothing, you got nothing to lose
