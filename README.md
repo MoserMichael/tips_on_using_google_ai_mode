@@ -1,13 +1,21 @@
 # Google AI mode for privacy aware individuals
 
-Related link: you can check out my gist on running [Claude locally on the Mac](https://gist.github.com/MoserMichael/8e6dd03acf910b7c4e8f1f51734a94d1)
+Somehow related link: you can check out my gist on running [Claude locally on the Mac](https://gist.github.com/MoserMichael/8e6dd03acf910b7c4e8f1f51734a94d1)
 
 Disclaimer: all these observations were made in early 2026. Now all of this is subject to change, in our fast-moving world.
 
 Google AI mode is a really great chat bot. It is giving great answers on both technical questions and questions of a general nature. I am frankly impressed by this milestone of engineering, working at such a huge scale.
 
+Now some google accounts or some locations _don't_ display the option of google ai mode, this guide explains, which google URL parameters will force this feature to appear.
+
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Additional query parameters `hl=en` if you want to force the UI language and language of the LLM answer to English. `https://www.google.com/search?udm=50&hl=en` [link](https://www.google.com/search?udm=50&hl=en)
+- Google ai pro mode. The UI has a pro mode switch, this adds the `arv=1` parameters. Now the full URL for google AI mode, in english and pro mode is `https://www.google.com/search?udm=50&hl=en&arv=1` [link](https://www.google.com/search?udm=50&hl=en&arv=1) 'pro' mode seems to thing longer about an answer, so it is better for deep research.
+- Other dorky url parameters: Switching between 'fast' and 'pro' mode wil add additional parameters to the url. Note that both versions have common url parameters `aep=1` `ntc=1` `fbs=` - without value. I like to keep my url's short, with minimal URL parameters, most of this additional stuff probably only serves fingerprinting and tracking purposes... 
+    - fast mode full url: `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50`
+    - pro mode full url:  `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50&arv=1`
+
+
 - while being logged into a google account: `https://myactivity.google.com/myactivity?product=83` - gives you the history of your past discussions with Google AI mode. (Right now there is no such history on the chat bot page, for whatever reasons)
 
  Google in AI mode uses the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
@@ -25,7 +33,6 @@ The brave search engine also has a similar chat bot in query fan-out mode.
 See link [https://search.brave.com/ask?q=&source=llmSuggest](https://search.brave.com/ask?q=&source=llmSuggest)
 
 Also I have started to use regular brave search [https://search.brave.com/](https://search.brave.com/) - its sometimes a close competition for google, if you ask me! 
-
 
 ### Now where is the problem? 
 
