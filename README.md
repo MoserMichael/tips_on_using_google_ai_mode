@@ -22,18 +22,25 @@ Now some google accounts or some locations _don't_ display the option of google 
 ## what is going on here?
 
  Google in AI mode uses a model from the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
-    - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
-    - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner. 
-    - I like that AI mode has a more direct / less sycophantic style of communication, compared to Gemini. 
-    - The UI of AI mode does not keep a history of your chats, unlike what you get with gemini. So you can't easily return to a previous chat and continue it.
-    
+
+- AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
+- The query Fan-out process seems to be based on US Patent [Generating query variants using a trained generative model](https://patents.google.com/patent/US11663201B2/en) - says [searchengineland](https://searchengineland.com/guide/query-fan-out). Here: 
+    - A 'Controller engine' agent is maintaining the conversation with the client as well as formulating the general question / determining if he answer is of sufficient quality, and if the quality is not sufficient then ask additional questions.
+    - A 'Variant engine' is an engine that is reformulating the original question into multiple simple search queries, and forwarding them to an automated search tool
+    - 'Search tool' is performing the parallel search & retrieval of the internet queries, which includes reading the text of the resource returned by the search. 
+    - Some component needs to sum up the result of the search queries. not clear if that is a separate component or the 'Controller engine'
+- In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner. 
+- I like that AI mode has a more direct / less sycophantic style of communication, compared to Gemini (somehow this got worse, i n recent months...) 
+
 Google in AI mode has a shorter context window, compared to google gemini. This means that AI mode is not the right tool to conduct a long chat session that tries to research a complex topic very deeply. If you try to conduct a long chat session with many questions and answer, then you will notice that google in AI mode does not remember what it talked about earlier. However it is great for fact based questions and answers - exactly what you would expect from an intelligent search engine.  
 
 Another disadvantage: you can't set your own system prompt with google ai mode. It might be, that query fan-out is requiring a specialized system prompt.
 
 There is actually a git repository with leaked system prompts. It lists the following [system prompt for Google AI mode](https://github.com/asgeirtj/system_prompts_leaks/blob/main/Google/google-search-ai-mode.md)
 
-It has some general advice on using the search tool, image search tool and python evaluation environment.
+This seems to be the prompt of he customer facing 'Controller engine', as that is the agent exposed directly to the user.
+
+The prompt has some general advice on using the search tool, image search tool and python evaluation environment.
 
 """
 **General rules for using the search tool:**
@@ -43,9 +50,9 @@ It has some general advice on using the search tool, image search tool and pytho
 - You do not need to use the search tool to identify the user query, search tool will provide you the results of the user query automatically.
 """
 
-The first two items indicate, that breaking down of the question into several easier internet search queries is done by the main search agent, and not by a separate agent. 
+The first two items indicate, that breaking down of the question into several easier internet search queries is done by the main 'Controller engine' agent, and not by a separate 'Variant engine'. 
 
-as well as guidelines on style 
+As well as guidelines on style 
 
 """
 You are an authentic, adaptive collaborator. Your goal is to address the user's true intent with insightful, yet clear and concise responses—like a helpful peer, not a rigid lecturer. Subtly adapt your tone, energy, and humor to the user's style. Use simple, everyday words unless the topic requires technical terms. Be succinct. If the query refers to a single fact, respond directly. Do not use ancillary facts from context to formulate a response.
