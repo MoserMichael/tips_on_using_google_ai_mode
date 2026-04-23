@@ -1,6 +1,8 @@
 # Google AI mode for privacy aware individuals
 
+<!--
 Somehow related link: you can check out my gist on running [Claude locally on the Mac](https://gist.github.com/MoserMichael/8e6dd03acf910b7c4e8f1f51734a94d1)
+//-->
 
 Disclaimer: all these observations were made in early 2026. Now all of this is subject to change, in our fast-moving world.
 
@@ -10,14 +12,16 @@ Now some google accounts or some locations _don't_ display the option of google 
 
 - To access Google AI mode use the following url: `https://www.google.com/search?udm=50` [link](https://www.google.com/search?udm=50) - this will display the chat window in all locations, even in places where AI mode does not appear as an option on the google search page.
 - Additional query parameters `hl=en` if you want to force the UI language and language of the LLM answer to English. `https://www.google.com/search?udm=50&hl=en` [link](https://www.google.com/search?udm=50&hl=en)
-- Google ai pro mode. The UI has a pro mode switch, this adds the `arv=1` parameters. Now the full URL for google AI mode, in english and pro mode is `https://www.google.com/search?udm=50&hl=en&arv=1` [link](https://www.google.com/search?udm=50&hl=en&arv=1) 'pro' mode seems to think longer, so it is better for deep research.
-- Other dorky url parameters: Switching between 'fast' and 'pro' mode wil add additional parameters to the url. Note that both versions have common url parameters `aep=1` `ntc=1` `fbs=` - without value. I like to keep my url's short, with minimal URL parameters (the reason: If you have something essential like login session id, then you would probably send this information via http post parameters, and not via url parameter...) 
+- Google ai pro mode. The UI has a pro mode switch, this adds the `arv=1` parameters. Now the full URL for google AI mode, in english and pro mode is `https://www.google.com/search?udm=50&hl=en&arv=1` [link](https://www.google.com/search?udm=50&hl=en&arv=1) 'pro' mode seems to think longer. I am not sure it always returns better results. Mileage may vary.
+- Other dorky url parameters: Switching between 'fast' and 'pro' mode will add additional parameters to the url. Note that both versions have common url parameters `aep=1` `ntc=1` `fbs=` - without value. I like to keep my url's short, with minimal URL parameters (the reason: If you have something essential like login session id, then you would probably send this information via http post parameters, and not via url parameter...) 
     - fast mode full url: `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50`
     - pro mode full url:  `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50&arv=1`
 
 - while being logged into a google account: `https://myactivity.google.com/myactivity?product=83` - gives you the history of your past discussions with Google AI mode. (Right now there is no such history on the chat bot page, for whatever reasons)
 
- Google in AI mode uses the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
+## what is going on here?
+
+ Google in AI mode uses a model from the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
     - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
     - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner. 
     - I like that AI mode has a more direct / less sycophantic style of communication, compared to Gemini. 
@@ -39,6 +43,8 @@ It has some general advice on using the search tool, image search tool and pytho
 - You do not need to use the search tool to identify the user query, search tool will provide you the results of the user query automatically.
 """
 
+The first two items indicate, that breaking down of the question into several easier internet search queries is done by the main search agent, and not by a separate agent. 
+
 as well as guidelines on style 
 
 """
@@ -59,7 +65,13 @@ and guidelines on how to approach the task of answering the question
 Your response should be consistent, relevant, and directly address the user's need as informed by the ongoing conversation. End your full response with a single, proactive follow-up that either proposes a specific way to proceed or requests a critical detail to advance the conversation. Use markdown **bolding** on key terms to make it scannable.
 """
 
-### Alternative options:
+Now the search tools is the component that is sending the regular internet search requests, and which is reading the responses. This component is the real enigma here. There remain questions:
+
+- what is the depth of the search? How many different queries are dispatched in parallel?
+- how many search results are processed for each query?
+- Are the search results summed up by another LLM instance, before they get passed on the main LLM instance? This makes sense: the context of an LLM window is limited, it has to maintain the conversation with the user and figure out the intent of the current question, with relation to previous questions. It would make sense to separate summing up of search results into a different agent.
+
+## Alternative options:
 
 The brave search engine also has a similar chat bot in query fan-out mode. 
 
@@ -67,7 +79,7 @@ See link [https://search.brave.com/ask?q=&source=llmSuggest](https://search.brav
 
 Also I have started to use regular brave search [https://search.brave.com/](https://search.brave.com/) - its sometimes a close competition for google, if you ask me! 
 
-### Now where is the problem? 
+## Now where is the problem? 
 
 I think the nature of your interactions with Google in AI mode is giving away quite a lot of information about you and your work. All this information is stored by the google empire and analyzed later on.
 
@@ -77,7 +89,7 @@ The good thing: Google in AI mode can currently be used without being logged int
 
 Also: you can store your chat session as HTML files, here with this project you get a tool to export the chat session into markdown file. Markdown is a format that is very close to text where you can look at meaningful text!
 
-### Cyberpunkies, let's roll!
+## Cyberpunkies, let's roll!
 
 - General advise: use Firefox. Google Chrome has the 'incognito mode' feature, however it turns out that this is [not very incognito](https://www.nytimes.com/wirecutter/blog/incognito-mode-isnt-incognito/)
 
@@ -90,7 +102,7 @@ Also: you can store your chat session as HTML files, here with this project you 
     - Remember that the chat session is gone, once you have closed the browser window. You can save the chat session as an html file, with the 'Save As' option in the 'File' menu.
 
 
-### Command line tool for asking single questions
+## Command line tool for asking single questions
 
 
 ```
@@ -106,7 +118,7 @@ All such web scraping efforts break at some point, it's a cat and mouse game. Yo
 
 Also the trick to avoid browser scraping: the prompt of the script asks for an xml formatted response, and searches for the text in the xml response.
 
-### Now a digression
+## Now a digression
 
 I somehow got convinced, that privacy isn't a luxury - it's a basic necessity.
 
