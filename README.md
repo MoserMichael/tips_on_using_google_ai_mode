@@ -21,7 +21,7 @@ Now some google accounts or some locations _don't_ display the option of google 
 
 ## what is going on here?
 
- Google in AI mode uses a model from the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini), it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
+ Google in AI mode uses a model from the [Gemini language model](https://en.wikipedia.org/wiki/Google_Gemini) family, it is similar to what you get in [https://gemini.google.com](https://gemini.google.com), however there are differences:
 
 - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
 - The query Fan-out process seems to be based on US Patent [Generating query variants using a trained generative model](https://patents.google.com/patent/US11663201B2/en) - says [searchengineland](https://searchengineland.com/guide/query-fan-out). Here: 
