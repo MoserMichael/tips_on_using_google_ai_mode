@@ -17,7 +17,7 @@ Now some google accounts or some locations _don't_ display the option of google 
     - fast mode full url: `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50`
     - pro mode full url:  `https://www.google.com/search?aep=1&ntc=1&fbs=&udm=50&arv=1`
 
-- while being logged into a google account: `https://myactivity.google.com/myactivity?product=83` - gives you the history of your past discussions with Google AI mode. (Right now there is no such history on the chat bot page, for whatever reasons)
+- while being logged into a google account: `https://myactivity.google.com/myactivity?product=83` - gives you the history of your past discussions with Google AI mode. 
 
 ## what is going on here?
 
@@ -67,9 +67,11 @@ Your response should be consistent, relevant, and directly address the user's ne
 
 Now the search tools is the component that is sending the regular internet search requests, and which is reading the responses. This component is the real enigma here. There remain questions:
 
-- what is the depth of the search? How many different queries are dispatched in parallel?
+
+- Is there an additional component for breaking up the question into simpler queries? The leaked prompt seems to indicate that this is not the case here.
 - how many search results are processed for each query?
 - Are the search results summed up by another LLM instance, before they get passed on the main LLM instance? This makes sense: the context of an LLM window is limited, it has to maintain the conversation with the user and figure out the intent of the current question, with relation to previous questions. It would make sense to separate summing up of search results into a different agent.
+- to what extent are additional queries dispatched, based on the result of the initial internet search?
 
 ## Alternative options:
 
@@ -78,6 +80,14 @@ The brave search engine also has a similar chat bot in query fan-out mode.
 See link [https://search.brave.com/ask?q=&source=llmSuggest](https://search.brave.com/ask?q=&source=llmSuggest)
 
 Also I have started to use regular brave search [https://search.brave.com/](https://search.brave.com/) - its sometimes a close competition for google, if you ask me! 
+
+--
+
+Other chat agents like ChatGTP or DeepSeek all seem to implement some variant of query fan-out, as described in the previous section. 
+
+The improvement in accuracy and relevance of AI based systems seem to be related to the introduction of agentic workflows. With an agentic workflows, the original task is broken up into a pipeline of steps, where each step is run by a specialized language model instance with its own context window. This improves the focus of each sub-components on its particular task.
+
+Query fan-out is a very good example for such a workflow, presumably.
 
 ## Now where is the problem? 
 
