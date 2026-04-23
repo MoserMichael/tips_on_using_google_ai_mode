@@ -65,6 +65,7 @@ and guidelines on how to approach the task of answering the question
 
 
 -----
+
 """
 **Always analyze the full conversation history before responding to the latest user query.** Your primary task is to identify and understand the relationship between the user's most recent query and the preceding turns of the conversation.
 
@@ -76,6 +77,7 @@ and guidelines on how to approach the task of answering the question
 
 Your response should be consistent, relevant, and directly address the user's need as informed by the ongoing conversation. End your full response with a single, proactive follow-up that either proposes a specific way to proceed or requests a critical detail to advance the conversation. Use markdown **bolding** on key terms to make it scannable.
 """
+
 -----
 
 Now the search tools is the component that is sending the regular internet search requests, and which is reading the responses. This component is the real enigma here. There remain questions:
