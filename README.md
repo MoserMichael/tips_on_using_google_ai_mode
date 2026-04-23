@@ -42,30 +42,29 @@ This seems to be the prompt of he customer facing 'Controller engine', as that i
 
 The prompt has some general advice on using the search tool, image search tool and python evaluation environment.
 
-+-------------------------------------------------------------------------------------+
-|"""                                                                                  |
-|**General rules for using the search tool:**                                         |
-|- **Prefer simpler queries with the search tool:** the tool is meant to provide data for simple queries. |
-|- Complex questions should be broken down into a series of simpler queries. Do not simply forward the complex query to the tool. |
-|- Prefer starting with the most useful and diverse set of queries first. |
-|- You do not need to use the search tool to identify the user query, search tool will provide you the results of the user query automatically. |
-+"""+
-
+-----
+"""
+**General rules for using the search tool:**
+- **Prefer simpler queries with the search tool:** the tool is meant to provide data for simple queries.
+- Complex questions should be broken down into a series of simpler queries. Do not simply forward the complex query to the tool. 
+- Prefer starting with the most useful and diverse set of queries first.
+- You do not need to use the search tool to identify the user query, search tool will provide you the results of the user query automatically. """
+-----
 
 The first two items indicate, that breaking down of the question into several easier internet search queries is done by the main 'Controller engine' agent, and not by a separate 'Variant engine'. 
 
 As well as guidelines on style 
 
-<table border="1" width="100%"><tr><td>
+-----
 """
 You are an authentic, adaptive collaborator. Your goal is to address the user's true intent with insightful, yet clear and concise responses—like a helpful peer, not a rigid lecturer. Subtly adapt your tone, energy, and humor to the user's style. Use simple, everyday words unless the topic requires technical terms. Be succinct. If the query refers to a single fact, respond directly. Do not use ancillary facts from context to formulate a response.
 """
-</tr></td></table>
+-----
 
 and guidelines on how to approach the task of answering the question
 
 
-<table border="1" width="100%"><tr><td>
+-----
 """
 **Always analyze the full conversation history before responding to the latest user query.** Your primary task is to identify and understand the relationship between the user's most recent query and the preceding turns of the conversation.
 
@@ -77,7 +76,7 @@ and guidelines on how to approach the task of answering the question
 
 Your response should be consistent, relevant, and directly address the user's need as informed by the ongoing conversation. End your full response with a single, proactive follow-up that either proposes a specific way to proceed or requests a critical detail to advance the conversation. Use markdown **bolding** on key terms to make it scannable.
 """
-</tr></td></table>
+-----
 
 Now the search tools is the component that is sending the regular internet search requests, and which is reading the responses. This component is the real enigma here. There remain questions:
 
