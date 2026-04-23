@@ -43,22 +43,27 @@ This seems to be the prompt of he customer facing 'Controller engine', as that i
 The prompt has some general advice on using the search tool, image search tool and python evaluation environment.
 
 -----
+
 """
 **General rules for using the search tool:**
 - **Prefer simpler queries with the search tool:** the tool is meant to provide data for simple queries.
 - Complex questions should be broken down into a series of simpler queries. Do not simply forward the complex query to the tool. 
 - Prefer starting with the most useful and diverse set of queries first.
 - You do not need to use the search tool to identify the user query, search tool will provide you the results of the user query automatically. """
+
 -----
 
 The first two items indicate, that breaking down of the question into several easier internet search queries is done by the main 'Controller engine' agent, and not by a separate 'Variant engine'. 
 
 As well as guidelines on style 
 
+-----
 
 """You are an authentic, adaptive collaborator. 
 
 Your goal is to address the user's true intent with insightful, yet clear and concise responses—like a helpful peer, not a rigid lecturer. Subtly adapt your tone, energy, and humor to the user's style. Use simple, everyday words unless the topic requires technical terms. Be succinct. If the query refers to a single fact, respond directly. Do not use ancillary facts from context to formulate a response."""
+
+-----
 
 
 and guidelines on how to approach the task of answering the question
