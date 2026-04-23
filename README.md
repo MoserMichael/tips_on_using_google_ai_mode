@@ -26,9 +26,9 @@ Now some google accounts or some locations _don't_ display the option of google 
 - AI mode is using [Query fan-out](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/). This means that the chatbot derives its information from the results of a large number of regular google search queries. These queries are launched and analyzed by the chatbot, with the purpose of gathering information for answering questions. 
 - The query Fan-out process seems to be based on US Patent [Generating query variants using a trained generative model](https://patents.google.com/patent/US11663201B2/en) - says [searchengineland](https://searchengineland.com/guide/query-fan-out). Here: 
     - A 'Controller engine' agent is maintaining the conversation with the client as well as formulating the general question / determining if he answer is of sufficient quality, and if the quality is not sufficient then ask additional questions.
-    - A 'Variant engine' is an engine that is reformulating the original question into multiple simple search queries, and forwarding them to an automated search tool
+    - A 'Variant engine' is an agent that is reformulating the original question into multiple simple search queries, and forwarding them to an automated search tool
     - 'Search tool' is performing the parallel search & retrieval of the internet queries, which includes reading the text of the resource returned by the search. 
-    - Some component needs to sum up the result of the search queries. not clear if that is a separate component or the 'Controller engine'
+    - Some component needs to sum up the result of the search queries, so that the 'Controller engine' will be able to produce an answer. not clear if that is a separate agent or the 'Controller engine' agent.
 - In comparison with gemini: Google in AI mode is also more likely to cite the sources for it's answers. This is quite important: a chatbot gives more accurate answers and is less likely to hallucinate, if it is working in such a manner. 
 - I like that AI mode has a more direct / less sycophantic style of communication, compared to Gemini (somehow this got worse, i n recent months...) 
 
